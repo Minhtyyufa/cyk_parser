@@ -1,4 +1,3 @@
-import pprint
 from collections import OrderedDict
 import sys
 
@@ -41,16 +40,10 @@ class CKY_parser:
                     else:
                         self.rules[symbols[0]][symbols[1]].append(result)
 
-                ''' accidentally had both orders of the rule
-                    if symbols[1] not in self.rules:
-                        self.rules[symbols[1]] = {
-                            symbols[0]: result
-                        }
-                    else:
-                        self.rules[symbols[1]][symbols[0]] = result
-                '''
+
 
     '''
+    Structure of the parse table:
         [{s: [[index1, index2],[index1, index2]]}, {}, {}, {}]
         [[] [] [] []]
     '''
